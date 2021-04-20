@@ -1,0 +1,70 @@
+procedure dot_product(var v1,v2:array_of float[100])
+VAR
+i,j:integer;
+ps:float;
+BEGIN
+ps:=0;
+for i from 0 to v1.length-1 do
+for j from 0 to v2.length-1 do
+ps:=ps+v1[i]*v2[j];
+end_for
+end_for
+END.
+///////////////////////////////////////////////////////////////////
+ALGORITHM vectors
+
+VAR
+i,j:integer;
+n:integer;
+BEGIN
+repeat
+ write ("give the number of vectors ");
+ read(n);
+until (n%2=0)
+
+for i from 1 to n/2 do
+for j from 1 to n/2 do
+
+if dot_product(vi,vj)=0 then
+write ("vi and vj are orthogonal);
+END_if
+END_for
+END.
+//////////////////////////////////////////////////////////////
+function dot_priduct(var v1,V2:array_of real[100])(): return_real
+VAR
+i,j:integer;
+ps:float;
+BEGIN
+ps:=0;
+for i from 0 to v1.length-1 do
+for j from 0 to v2.length-1 do
+ps:=ps+v1[i]*v2[j];
+end_for
+end_for
+return ps;
+END.
+///////////////////////////////////////////////////////////////
+ALGORITHM vectors
+
+VAR
+i,j:integer;
+n:integer;
+product:float;
+BEGIN
+repeat
+ write ("give the number of vectors ");
+ read(n);
+until (n%2=0)
+
+for i from 1 to n/2 do
+for j from 1 to n/2 do
+
+ ps:=dot_priduct();
+ if ps=0 then
+ write ("vi and vj are orthogonal);
+END_if
+end_for
+
+
+END.
